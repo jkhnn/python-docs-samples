@@ -71,6 +71,8 @@ def create_dataset(project_id, compute_region, dataset_name, multilabel=False):
 
     # [END automl_language_create_dataset]
 
+    return dataset.name.split("/")[-1]
+
 
 def list_datasets(project_id, compute_region, filter_):
     """List all datasets."""

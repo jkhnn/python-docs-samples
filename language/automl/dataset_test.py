@@ -29,7 +29,7 @@ compute_region = "us-central1"
 def test_dataset_create_import_delete(capsys):
     # create dataset
     dataset_name = "test_" + datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    automl_natural_language_dataset.create_dataset(
+    _ = automl_natural_language_dataset.create_dataset(
         project_id, compute_region, dataset_name
     )
     out, _ = capsys.readouterr()
